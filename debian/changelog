@@ -1,0 +1,5 @@
+simavr (1.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #568156)
+
+ -- Laurent Navet (Mali) <laurent.navet@gmail.com>  Thu, 01 Nov 2012 22:06:19 +0000
