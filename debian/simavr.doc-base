@@ -1,0 +1,9 @@
+Document: simavr
+Title: Debian simavr Manual
+Author: Jakob Gruber <jakob.gruber@gmail.com>
+Abstract: This manual describes what simavr is
+ and how it can be used.
+Section: Emulators
+
+Format: pdf
+Files: /usr/share/doc/simavr/manual.pdf.gz
