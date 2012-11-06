@@ -10,8 +10,8 @@ Homepage: https://github.com/buserror-uk/simavr
 
 Package: simavr
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: lean, mean, hackable atmel AVR simulator
+Depends: ${shlibs:Depends}, ${misc:Depends}, libsimavr1
+Description: lean, mean, hackable Atmel AVR simulator
  simavr is a new AVR simulator for linux, or any platform that uses avr-gcc.
  It uses avr-gcc's own register definition to simplify creating new targets
  for supported AVR devices.
@@ -21,3 +21,17 @@ Description: lean, mean, hackable atmel AVR simulator
  The simulator loads ELF files directly, and there is even a way to specify
  simulation parameters directly in the emulated code using an .elf section.
  You can also load multipart HEX files.
+
+Package: libsimavr1-dev
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, simavr
+Description: lean, mean, hackable Atmel AVR simulator: Development files
+ Contains all the necessary files for building projects upon the simavr core.
+
+Package: libsimavr1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: lean, mean, hackable Atmel AVR simulator: Runtime library
+ Contains all the necessary files for building projects upon the simavr core.

@@ -1,0 +1,5 @@
+usr/lib/libsimavr.a
+usr/lib/libsimavr.so
+usr/lib/pkgconfig/*
+usr/include/simavr/*
+usr/include/simavr/avr/*
