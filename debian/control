@@ -2,7 +2,7 @@ Source: simavr
 Section: electronics
 Priority: extra
 Maintainer: Laurent Navet (Mali) <laurent.navet@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), avr-libc, libelf-dev, pkg-config, freeglut3-dev
+Build-Depends: debhelper (>= 9.0.0), avr-libc, libelf-dev, pkg-config, freeglut3-dev
 Standards-Version: 3.9.3
 Homepage: https://github.com/buserror-uk/simavr
 #Vcs-Git: git://git.debian.org/collab-maint/simavr.git
@@ -25,6 +25,7 @@ Description: lean, mean, hackable Atmel AVR simulator
 Package: libsimavr1-dev
 Section: libdevel
 Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}, simavr
 Description: lean, mean, hackable Atmel AVR simulator: Development files
  Contains all the necessary files for building projects upon the simavr core.
@@ -32,6 +33,7 @@ Description: lean, mean, hackable Atmel AVR simulator: Development files
 Package: libsimavr1
 Section: libs
 Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: lean, mean, hackable Atmel AVR simulator: Runtime library
  Contains all the necessary files for building projects upon the simavr core.

@@ -15,4 +15,4 @@ export RELEASE=1
 
 override_dh_auto_install:
 	$(MAKE) DESTDIR=$$(pwd)/debian/tmp/usr install
-#	$(MAKE) DESTDIR=$$(pwd)/debian/simavr/usr install
+
