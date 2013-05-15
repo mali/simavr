@@ -192,9 +192,8 @@ static void avr_uart_write(struct avr_t * avr, avr_io_addr_t addr, uint8_t v, vo
 		//uint8_t udre = avr_regbit_get(avr, p->udrc.raised);
 		uint8_t txc = avr_regbit_get(avr, p->txc.raised);
 
-		// no need to write this value in here, only the
-		// interrupt flags need clearing!
-		// avr_core_watch_write(avr, addr, v);
+                // required for u2x (double uart transmission speed)
+		avr_core_watch_write(avr, addr, v);
 
 		//avr_clear_interrupt_if(avr, &p->udrc, udre);
 		avr_clear_interrupt_if(avr, &p->txc, txc);
@@ -231,6 +230,9 @@ void avr_uart_reset(struct avr_io_t *io)
 	avr_cycle_timer_cancel(avr, avr_uart_rxc_raise, p);
 	avr_cycle_timer_cancel(avr, avr_uart_txc_raise, p);
 	uart_fifo_reset(&p->input);
+
+        avr_regbit_set(avr, p->ucsz);
+        avr_regbit_clear(avr, p->ucsz2);
 
 	// DEBUG allow printf without fiddling with enabling the uart
 	avr_regbit_set(avr, p->txen);
