@@ -7,12 +7,31 @@
 # This special exception was added by Craig Small in version 0.37 of dh-make.
 
 # Uncomment this to turn on verbose mode.
+<<<<<<< HEAD
 #export DH_VERBOSE=1
 export RELEASE=1
+=======
+export DH_VERBOSE=1
+export RELEASE=1
+#export DESTDIR=/usr
+>>>>>>> master
 
 %:
 	dh $@ 
 
+<<<<<<< HEAD
 override_dh_auto_install:
 	$(MAKE) DESTDIR=$$(pwd)/debian/tmp/usr install
 
+=======
+#override_dh_auto_clean:
+#	rm -f simavr/sim_core_config.h
+#	dh_auto_clean
+
+override_dh_auto_install:
+	$(MAKE) DESTDIR=$$(pwd)/debian/simavr/usr install
+
+#override_dh_clean:
+#	rm -f simavr/sim_core_config.h
+#	dh_clean
+>>>>>>> master

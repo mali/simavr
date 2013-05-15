@@ -2,7 +2,11 @@ Source: simavr
 Section: electronics
 Priority: extra
 Maintainer: Laurent Navet (Mali) <laurent.navet@gmail.com>
+<<<<<<< HEAD
 Build-Depends: debhelper (>= 9.0.0), avr-libc, libelf-dev, pkg-config, freeglut3-dev
+=======
+Build-Depends: debhelper (>= 8.0.0), avr-libc, libelf-dev, pkg-config, freeglut3-dev
+>>>>>>> master
 Standards-Version: 3.9.3
 Homepage: https://github.com/buserror-uk/simavr
 #Vcs-Git: git://git.debian.org/collab-maint/simavr.git
@@ -10,8 +14,13 @@ Homepage: https://github.com/buserror-uk/simavr
 
 Package: simavr
 Architecture: any
+<<<<<<< HEAD
 Depends: ${shlibs:Depends}, ${misc:Depends}, libsimavr1
 Description: lean, mean, hackable Atmel AVR simulator
+=======
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: lean, mean, hackable atmel AVR simulator
+>>>>>>> master
  simavr is a new AVR simulator for linux, or any platform that uses avr-gcc.
  It uses avr-gcc's own register definition to simplify creating new targets
  for supported AVR devices.
@@ -21,6 +30,7 @@ Description: lean, mean, hackable Atmel AVR simulator
  The simulator loads ELF files directly, and there is even a way to specify
  simulation parameters directly in the emulated code using an .elf section.
  You can also load multipart HEX files.
+<<<<<<< HEAD
 
 Package: libsimavr-dev
 Section: libdevel
@@ -37,3 +47,5 @@ Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: runtime library of simavr AVR simulator
  This package provides the runtime library used by the simavr core.
+=======
+>>>>>>> master

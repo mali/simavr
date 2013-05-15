@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 usr/bin/simavr
+=======
+doc/manual/manual.pdf /usr/share/doc/simavr/
+>>>>>>> master
