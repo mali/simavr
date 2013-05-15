@@ -22,12 +22,12 @@ Description: lean, mean, hackable Atmel AVR simulator
  simulation parameters directly in the emulated code using an .elf section.
  You can also load multipart HEX files.
 
-Package: libsimavr1-dev
+Package: libsimavr-dev
 Section: libdevel
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}, simavr
-Description: lean, mean, hackable Atmel AVR simulator: Development files
+Description: libsimavr1 development libraries and header files
  Contains all the necessary files for building projects upon the simavr core.
 
 Package: libsimavr1
@@ -35,5 +35,5 @@ Section: libs
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: lean, mean, hackable Atmel AVR simulator: Runtime library
- Contains all the necessary files for building projects upon the simavr core.
+Description: runtime library of simavr AVR simulator
+ This package provides the runtime library used by the simavr core.
